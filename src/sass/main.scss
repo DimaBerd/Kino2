@@ -27,7 +27,7 @@ $not-mobile: 641px;
 
 // ---Susy grid---
 $susy: (
-        container: 1200px,
+        container: 960px,
         columns: 12,
         gutters: 1.5,
         global-box-sizing: border-box,
@@ -45,3 +45,11 @@ $susy: (
 @import "header";
 @import "footer";
 @import "styles";
+@import "header-slider";
+@import "films";
+@import "contact-form";
+@import "actors";
+@import "news-content";
+@import "sidebar-random";
+@import "sitemap";
+@import "logo";

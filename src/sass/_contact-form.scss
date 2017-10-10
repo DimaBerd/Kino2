@@ -1,0 +1,114 @@
+.contact-form {
+  padding: 38px 0 50px;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+
+  &.container, .container {
+    position: relative;
+  }
+
+
+  .form-action {
+    &:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      background-color: rgba(0, 0, 0, 0);
+      @include transition(background-color, .3s);
+    }
+
+    &:hover:before {
+      background-color: rgba(0, 0, 0, .2);
+    }
+
+    input[type="submit"]:hover {
+      .form-action {
+        &:before {
+          width: 102%;
+          height: 108%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.contact-form__glasses-wrap {
+
+  @include breakpoint($not-desktop) {
+    display: none;
+  }
+
+  img {
+    position: absolute;
+    right: -127px;
+    bottom: -216px;
+    display: block;
+    @include transition(all, .3s);
+    @include breakpoint(1024px 1240px) {
+      right: -80px;
+      @include scale(.8);
+    }
+  }
+}
+
+.contact-form__title {
+  margin-bottom: 2px;
+  font-family: "RobotoBlack", sans-serif;
+  font-size: 49px;
+  text-transform: uppercase;
+  color: #fff;
+  @include breakpoint($mobile) {
+    font-size: 30px;
+  }
+}
+
+.contact-form-wrap {
+  @include span(4 of 8 .4);
+  @include post(4 of 8 .4);
+
+  @include breakpoint($tablet) {
+    @include span(4 of 6 .4);
+    @include post(2 of 6 .4);
+  }
+
+  @include breakpoint($mobile) {
+    @include span(6 of 6 0);
+    @include post(6 of 6 0);
+  }
+
+  form {
+    width: 100%;
+    @include contact-form;
+
+    textarea {
+      min-height: 100px;
+    }
+
+    .form-item, .form-action {
+      position: relative;
+      width: 100%;
+    }
+
+  }
+}
+
+.blue {
+  color: $blue;
+}
+
+.contact-form__title-desc {
+  display: block;
+  margin-bottom: 22px;
+  font-family: "GeorgiaItalic", sans-serif;
+  font-size: 27px;
+  color: #AAAAAA;
+  @include breakpoint($mobile) {
+    font-size: 19px;
+  }
+}

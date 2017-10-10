@@ -1,0 +1,286 @@
+.header-slider {
+  position: relative;
+  overflow: hidden;
+
+  &:before, &:after {
+    @include breakpoint($desktop) {
+      position: absolute;
+      z-index: 8;
+      top: 0;
+      bottom: 0;
+      content: '';
+      display: block;
+      width: 178px;
+    }
+  }
+
+  &:before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+    @include breakpoint($not-desktop) {
+      position: absolute;
+      z-index: 6;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      display: block;
+      background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, .3));
+    }
+  }
+
+  &:after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+    @include breakpoint($not-desktop) {
+      display: none;
+    }
+  }
+
+  .slide-item {
+    width: 100%;
+    height: 100%;
+    padding-top: 187px;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    min-height: 666px;
+    @include breakpoint($tablet) {
+      background-position: center center !important;
+      padding-top: 173px;
+    }
+
+    @include breakpoint($mobile) {
+      background-position: calc(50% - 265px) center !important;
+      padding-top: 115px;
+      padding-bottom: 120px;
+    }
+  }
+
+  .flex-prev, .flex-next {
+    z-index: 10;
+    top: calc(50% - 112.5px);
+    display: inline-block;
+    background-color: rgba(225, 225, 225, .1);
+    opacity: 1;
+    width: 225px;
+    height: 225px;
+    font-size: 0;
+    line-height: 255px;
+    text-align: center;
+    vertical-align: middle;
+    @include transition(all, .3s);
+    @include brAll(50%);
+
+    &:hover {
+      background-color: rgba(225, 225, 225, .9);
+    }
+  }
+
+  .flex-prev {
+    left: -112px;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 64px;
+      line-height: 225px;
+    }
+  }
+
+  .flex-next {
+    right: -112px;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 64px;
+      line-height: 225px;
+    }
+  }
+
+  .flex-direction-nav {
+    @include breakpoint($not-desktop) {
+      display: none;
+    }
+  }
+
+  .flexslider:hover .flex-direction-nav .flex-prev {
+    left: -112px
+  }
+
+  .flexslider:hover .flex-direction-nav .flex-next {
+    right: -112px;
+  }
+
+  .flex-control-nav {
+    z-index: 11;
+    bottom: 35px;
+    right: 32px;
+    display: block;
+    width: auto;
+    @include breakpoint(601px 1100px) {
+      bottom: 73px;
+      right: 35px;
+    }
+
+    @include breakpoint($mobile) {
+      bottom: 153px;
+      right: 20px;
+    }
+
+    li {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+
+      &:not(:last-of-type) {
+        margin-bottom: 22px;
+      }
+    }
+
+    a {
+      width: 13px;
+      height: 13px;
+      background-color: transparent;
+      border: 1px solid #BBBBBB;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      @include transition(all, .3s);
+
+      &:not(.flex-active):hover {
+        background-color: $blue;
+        border: 1px solid $blue;
+      }
+    }
+
+    .flex-active {
+      background-color: #B8B8B8;
+    }
+  }
+}
+
+.slide-item__content {
+  position: relative;
+  z-index: 7;
+  @include breakpoint($desktop) {
+    @include span(3 of 8 .4);
+    @include post(5 of 8 .4);
+  }
+
+  @include breakpoint(801px 1023px) {
+     @include span(3 of 6 .4);
+     @include post(3 of 6 .4);
+   }
+
+  @include breakpoint(641px 800px) {
+    @include span(4 of 6 .4);
+    @include post(2 of 6 .4);
+  }
+
+  @include breakpoint($mobile) {
+    width: 94%;
+    margin-right: 6%;
+  }
+}
+
+.slide-item__title {
+  position: relative;
+  z-index: 7;
+  max-width: 495px;
+  margin-bottom: 18px;
+  font-family: $roboto_regular;
+  font-size: 55px;
+  text-decoration: none;
+  color: $blue;
+  @include transition(all, .3s);
+  @include breakpoint($mobile) {
+    font-size: 49px;
+  }
+}
+
+.slide-item__title a {
+  @extend .slide-item__title;
+}
+
+.slide-item__title a:hover , a.slide-item__title:hover {
+  opacity: .7;
+}
+
+.slide-item__vocab {
+  margin-bottom: 30px;
+  font-size: 0;
+
+  a {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 6px 15px;
+    border: 1px solid #444444;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: #878787;
+    @include transition(background-color, .3s);
+    @include brAll(15px);
+
+    &:hover {
+      background-color: rgba(135, 135, 135, .3);
+    }
+  }
+}
+
+.slide-item__desc {
+  margin-bottom: 30px;
+  font-family: $roboto_regular;
+  font-size: 16px;
+  line-height: 23px;
+  color: #fff;
+}
+
+.slide-item__wrap-links {
+  font-size: 0;
+
+  & > * {
+    @include breakpoint($not-mobile) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+}
+
+.wrap-about-film {
+  @include breakpoint($not-mobile) {
+    margin-right: 32px;
+  }
+}
+
+a.wrap-about-film, .wrap-about-film a {
+  margin-bottom: 23px;
+  @include blueButton;
+
+  @include breakpoint($mobile) {
+    width: auto;
+  }
+}
+
+a.wrap-watch-film, .wrap-watch-film a {
+  margin-bottom: 23px;
+  font-family:s $roboto_regular;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $blue;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

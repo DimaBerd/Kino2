@@ -39,3 +39,148 @@ $CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
 */
 
 
+/* ===============================================  Roboto  ============================================= */
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/Roboto/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/Roboto/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/Roboto/RobotoRegular/RobotoRegular.woff") format("woff"),
+  url("../fonts/Roboto/RobotoRegular/RobotoRegular.ttf") format("truetype");
+}
+/* font-family: "RobotoLight"; */
+@font-face {
+  font-family: "RobotoLight";
+  src: url("../fonts/Roboto/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/Roboto/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/Roboto/RobotoLight/RobotoLight.woff") format("woff"),
+  url("../fonts/Roboto/RobotoLight/RobotoLight.ttf") format("truetype");
+}
+/* font-family: "RobotoMedium"; */
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("../fonts/Roboto/RobotoMedium/RobotoMedium.eot");
+  src: url("../fonts/Roboto/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/Roboto/RobotoMedium/RobotoMedium.woff") format("woff"),
+  url("../fonts/Roboto/RobotoMedium/RobotoMedium.ttf") format("truetype");
+}
+/* font-family: "RobotoBold"; */
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../fonts/Roboto/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/Roboto/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/Roboto/RobotoBold/RobotoBold.woff") format("woff"),
+  url("../fonts/Roboto/RobotoBold/RobotoBold.ttf") format("truetype");
+}
+
+/* =========================================   Roboto Condensed  ======================================== */
+
+@font-face {
+  font-family: "RobotoCondensedRegular";
+  src: url("../fonts/Roboto/RobotoCondensed-Regular.ttf");
+}
+/* font-family: "RobotoCondensedLight"; */
+@font-face {
+  font-family: "RobotoCondensedLight";
+  src: url("../fonts/Roboto/RobotoCondensedLight.ttf");
+}
+/* font-family: "RobotoCondensedItalic"; */
+@font-face {
+  font-family: "RobotoCondensedItalic";
+  src: url("../fonts/Roboto/RobotoCondensedItalic.ttf");
+}
+/* font-family: "RobotoCondensedBold"; */
+@font-face {
+  font-family: "RobotoCondensedBold";
+  src: url("../fonts/Roboto/RobotoCondensedBold.ttf");
+}
+
+/* =========================================   Roboto black  ======================================== */
+
+@font-face {
+  font-family: "RobotoBlack";
+  src: url("../fonts/Roboto/Roboto-Black.ttf");
+}
+
+/* ===========================================   Georgia  ========================================== */
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia/georgia.ttf");
+}
+
+/* =======================================   Georgia  italic  ====================================== */
+
+@font-face {
+  font-family: "GeorgiaItalic";
+  src: url("../fonts/Georgia/georgiai.ttf");
+}
+
+/* ============================================  icomoon  =========================================== */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?pzt28h');
+  src:  url('../fonts/icomoon/icomoon.eot?pzt28h#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon/icomoon.ttf?pzt28h') format('truetype'),
+  url('../fonts/icomoon/icomoon.woff?pzt28h') format('woff'),
+  url('../fonts/icomoon/icomoon.svg?pzt28h#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-choise:before {
+  content: "\e900";
+}
+.icon-film:before {
+  content: "\e901";
+}
+.icon-menu:before {
+  content: "\e902";
+}
+.icon-in:before {
+  content: "\e903";
+}
+.icon-fb:before {
+  content: "\e904";
+}
+.icon-tw:before {
+  content: "\e905";
+}
+.icon-clock:before {
+  content: "\e906";
+}
+.icon-search:before {
+  content: "\e907";
+}
+.icon-update:before {
+  content: "\e908";
+}
+.icon-close:before {
+  content: "\e909";
+}
+.icon-arrow_2:before {
+  content: "\e90a";
+}
+.icon-logo:before {
+  content: "\e90b";
+}
+.icon-arrow:before {
+  content: "\e90c";
+}
+

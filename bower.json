@@ -13,7 +13,11 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "jQuery.mmenu": "mmenu#^6.1.0",
+    "fancybox": "^3.1.20",
+    "flexslider": "FlexSlider#^2.6.3",
+    "matchHeight": "matchheight#^0.7.2"
   },
   "devDependencies": {
     "susy": "~2.2.6",

@@ -1,0 +1,213 @@
+.films-news {
+  padding-bottom: 105px;
+  padding-top: 43px;
+  @include breakpoint($tablet) {
+    padding-bottom: 60px;
+  }
+
+  @include breakpoint($mobile) {
+    padding-bottom: 30px;
+  }
+}
+
+.news-content {
+  @include contentLeft;
+
+  @keyframes angle-hide {
+    from {
+      bottom: 0;
+      right: 0;
+    }
+
+    to {
+      bottom: -30px;
+      right: -30px;
+    }
+  }
+
+  @keyframes angle-show {
+    from {
+      bottom: -30px;
+      right: -30px;
+    }
+
+    to {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__title {
+    float: left;
+    margin-bottom: 18px;
+    @include clearfix;
+    @include breakpoint($mobile) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__tabs {
+    float: right;
+    margin-top: 6px;
+    margin-bottom: 21px;
+    @include clearfix;
+    @include breakpoint($mobile) {
+      width: 100%;
+      text-align: center;
+    }
+
+    .form-item, label {
+      display: inline-block;
+    }
+
+    .form-item {
+      margin-right: 5px;
+    }
+
+    input {
+      display: none;
+
+      &:checked + label {
+        background-color: $blue;
+        color: #fff;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: calc(50% - 7px);
+          display: inline-block;
+          border-top: 8px solid #104E98;
+          border-bottom: 8px solid transparent;
+          border-left: 8px solid #104E98;
+          border-right: 8px solid transparent;
+          @include rotate(225deg);
+        }
+      }
+    }
+
+    label {
+      position: relative;
+      padding: 6px 15px 3px;
+      cursor: pointer;
+      font-family: $roboto_regular;
+      font-size: 14px;
+      color: rgba(16, 26, 152, .7);
+      text-transform: uppercase;
+    }
+
+  }
+
+  &-list {
+    clear: both;
+
+    &-item {
+      position: relative;
+      z-index: 7;
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 19px;
+      overflow: hidden;
+      background-color: #F7F7F7;
+      font-size: 0;
+      @include clearfix;
+
+      a {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        text-decoration: none;
+      }
+
+      & a:after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 13px solid #DDDDDD;
+        border-bottom: 13px solid #fff;
+        border-left: 13px solid #DDDDDD;
+        border-right: 13px solid #fff;
+      }
+
+      a:hover {
+        &:after {
+          -webkit-animation: angle-hide .3s forwards;
+          -o-animation: angle-hide .3s forwards;
+          animation: angle-hide .3s forwards;
+        }
+      }
+
+      a:not(:hover) {
+        &:after {
+          -webkit-animation: angle-show .1s forwards;
+          -o-animation: angle-show .1s forwards;
+          animation: angle-show .1s forwards;
+        }
+      }
+    }
+  }
+}
+
+.news-list-item__img-wrap, .news-list-item__desc-wrap {
+  display: inline-block;
+}
+
+.news-list-item__img-wrap {
+  @include breakpoint($not-mobile) {
+    max-width: 210px;
+    @include span(3 of 8 .26);
+  }
+
+  @include breakpoint($mobile) {
+    @include span(8 of 8 0);
+  }
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.news-list-item__desc-wrap {
+  padding: 25px;
+  line-height: 23px;
+  @include breakpoint(611px) {
+    @include span(5 of 8 .26 last);
+  }
+
+  @include breakpoint($mobile) {
+    @include span(8 of 8 0);
+    padding: 20px;
+  }
+}
+
+.news__title {
+  font-family: $roboto_regular;
+  font-size: 16px;
+  color: #444444;
+}
+
+.news-data {
+  font-family: $roboto_regular;
+  font-size: 14px;
+  color: #AAAAAA;
+
+  &:before {
+    position: relative;
+    top: 2px;
+    content: '\e906';
+    display: inline-block;
+    margin-right: 8px;
+    font-family: "icomoon";
+    font-size: 13px;
+    color: #CCCCCC;
+  }
+}

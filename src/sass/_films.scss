@@ -1,0 +1,355 @@
+.films {
+  padding: 90px 0;
+  background: url('../images/assets/photography.png') left top repeat;
+  @include breakpoint($mobile) {
+    padding: 250px 0 45px 0;
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+.films__list {
+  @include clearfix;
+}
+
+.films__list-item {
+  margin-bottom: 30px;
+  @include breakpoint($desktop) {
+    @include span(2 of 8 .4);
+    @include clearfix;
+
+    &:nth-of-type(4n) {
+      @include span(2 of 8 .4 last);
+      @include clearfix;
+    }
+
+    &:nth-of-type(4n+1) {
+      clear: both;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    @include span(2 of 6 .4);
+    @include clearfix;
+
+    &:nth-of-type(3n) {
+      @include span(2 of 6 .4 last);
+      @include clearfix;
+    }
+
+    &:nth-of-type(3n+1) {
+      clear: both;
+    }
+  }
+
+  @include breakpoint($mobile) {
+    @include span(3 of 6 .4);
+    @include clearfix;
+
+    &:nth-of-type(2n) {
+      @include span(3 of 6 .4 last);
+      @include clearfix;
+    }
+
+    &:nth-of-type(2n+1) {
+      clear: both;
+    }
+  }
+
+  & * {
+    text-decoration: none;
+  }
+}
+
+.films__list-item-title {
+  margin-top: 17px;
+  margin-bottom: 9px;
+
+  a {
+    font-family: $roboto;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    color: #444444;
+
+    &:hover {
+      text-decoration: underline;
+      color: $blue;
+    }
+  }
+}
+
+.films__list-item-vocab {
+  font-family: $roboto_regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: #999999;
+
+  a {
+    font-family: $roboto_regular;
+    font-size: 14px;
+    text-decoration: none;
+    color: #999999;
+
+    &:hover {
+      text-decoration: underline;
+      color: $blue;
+    }
+  }
+}
+
+.films__img-wrap {
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    position: relative;
+    z-index: 6;
+    display: block;
+
+    &:before {
+      position: absolute;
+      z-index: 7;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      background-color: rgba(0, 0, 0, .4);
+      opacity: 0;
+      @include transition(opacity, .6s);
+    }
+
+    &:after {
+      position: absolute;
+      z-index: 8;
+      top: calc(50% - 28px);
+      left: calc(50% - 28px);
+      content: '\e90b';
+      font-family: 'icomoon';
+      font-size: 56px;
+      width: 56px;
+      height: 56px;
+      line-height: 56px;
+      color: rgba(225, 225, 225, .9);
+      opacity: 0;
+      @include transition(opacity, .6s);
+    }
+
+
+    &:hover {
+      &:before, &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.pager-load-more {
+  margin-top: 10px;
+  text-align: center;
+
+  a {
+    @include blueButton;
+  }
+}
+
+.films__form-filter-wrap {
+  position: absolute;
+  z-index: 13;
+  left: 0;
+  right: 0;
+  top: -133px;
+  @include breakpoint($tablet) {
+    left: 35px;
+    right: 35px;
+  }
+
+  @include breakpoint($mobile) {
+    top: -350px;
+    left: 20px;
+    right: 20px;
+  }
+
+  form {
+    position: relative;
+    z-index: 7;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.18);
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.18);
+    @include clearfix;
+  }
+
+  .form-item {
+    position: relative;
+    display: block;
+    float: left;
+    background: transparent;
+    @include breakpoint($not-mobile) {
+      border-right: 1px solid #DADADC;
+    }
+    @include breakpoint($mobile) {
+      &:not(:nth-of-type(3)) {
+        border-bottom: 1px solid #DADADC;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      z-index: -1;
+      top: calc(50% - 4px);
+      right: 17px;
+      content: '\e900';
+      font-family: "icomoon";
+      font-size: 8px;
+      color: #999999;
+    }
+
+    &:first-child {
+      width: 39%;
+      @include breakpoint(641px 720px) {
+        width: 33%;
+      }
+
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+
+      @include breakpoint($not-mobile) {
+        &:after {
+          position: absolute;
+          z-index: -1;
+          display: block;
+          width: 32px;
+          height: 32px;
+          top: calc(50% - 16px);
+          left: 23px;
+          content: '\e901';
+          font-family: 'icomoon';
+          font-size: 31px;
+          color: #333;
+        }
+      }
+
+      label {
+        @include breakpoint($not-mobile) {
+          left: 71px;
+        }
+      }
+
+      select, input {
+        @include breakpoint($not-mobile) {
+          padding: 44px 22px 19px 71px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      width: 22.3%;
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 30.7%;
+      @include breakpoint(641px 720px) {
+        width: 34.7%;
+      }
+
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+    }
+
+    label {
+      position: absolute;
+      z-index: -1;
+      top: 25px;
+      left: 23px;
+      display: block;
+      font-family: $roboto_regular;
+      font-size: 14px;
+      color: #AAAAAA;
+    }
+
+    select, input {
+      display: block;
+      width: 100%;
+      padding: 44px 22px 19px;
+      border: none;
+      background: transparent;
+      font-family: $roboto;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #444444;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      @include breakpoint($mobile) {
+        padding: 42px 22px 17px;
+      }
+    }
+  }
+
+  .form-action {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 8%;
+    float: left;
+    background: $blue;
+    @include clearfix;
+    @include breakpoint(641px 720px) {
+      width: 10%;
+    }
+
+    @include breakpoint($mobile) {
+      position: relative;
+      width: 100%;
+      height: 69px;
+    }
+
+    &:before {
+      position: absolute;
+      z-index: 6;
+      top: calc(50% - 11.5px);
+      left: calc(50% - 11.5px);
+      content: '\e907';
+      font-family: 'icomoon';
+      font-size: 23px;
+      color: #fff;
+    }
+
+    input[type="submit"] {
+      position: absolute;
+      z-index: 8;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      cursor: pointer;
+      font-size: 0;
+      @include transition(background-color, .3s);
+
+      &:hover {
+          background-color: rgba(0, 0, 0, .2);
+      }
+    }
+  }
+}

@@ -7,12 +7,15 @@ body {
 .container {
   @include clearfix;
   @include container;
-  @include breakpoint (($tablet, $mobile)) {padding: 0 20px;}
+  @include breakpoint (($tablet)) {padding: 0 35px;}
+  @include breakpoint (($mobile)) {padding: 0 20px;}
 }
 
 .page-wrap {
   min-height: 100vh;
   margin-bottom: -$footer_height;
+  font-family: $roboto_regular;
+  font-size: 16px;
 }
 
 h1 {
@@ -68,5 +71,45 @@ time, mark, audio, video {
   &::-moz-selection {
     background: #616D84; /* Gecko Browsers */
     color: #fff;
+  }
+}
+
+h2, .title  {
+  @include title;
+}
+
+a {
+  font-family: $roboto;
+  font-size: 15px;
+  color: $blue;
+}
+
+textarea {
+  resize: none;
+}
+
+.page-wrap {
+
+  .flexslider {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    .flex-prev, .flex-next {
+
+      &:before {
+        content: '\e90a';
+        display: inline-block;
+        font-family: "icomoon";
+        font-size: 53px;
+        vertical-align: middle;
+        text-shadow: none;
+        color: rgba(0, 0, 0, .7);
+      }
+    }
+
+    .flex-next {
+      @include rotate(180deg);
+    }
   }
 }

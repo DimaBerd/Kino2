@@ -1,0 +1,40 @@
+a.logo {
+  display: inline-block;
+  font-size: 0;
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:before {
+    content: '\e90b';
+    display: inline-block;
+    float: left;
+    margin-right: 16px;
+    font-family: "icomoon";
+    font-size: 52px;
+    color: $blue;
+  }
+}
+
+.sup-desc-logo {
+  display: inline-block;
+  margin-top: 3px;
+  font-family: $roboto_regular;
+  font-size: 17px;
+  color: rgba(225, 225, 225, .7);
+  text-transform: lowercase;
+}
+
+.sub-desc-logo {
+  position: relative;
+  left: -4px;
+  display: inline-block;
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 32px;
+  color: #fff;
+  text-transform: lowercase;
+}

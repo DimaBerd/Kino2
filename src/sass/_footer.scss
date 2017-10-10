@@ -1,10 +1,124 @@
 //styles for footer
 .page-buffer {
-  height: $footer_height;
-}
+    content: '';
+    display: block;
+    width: 100%;
+    min-height: $footer_height;
+  }
 
-footer {
-  border: 1px solid $example_color;
-  height: $footer_height;
-  background: #eee;
+.footer {
+  min-height: $footer_height;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  background-color: #e4e4e4;
+  font-family: $roboto_regular;
+  font-size: 14px;
+  color: #858585;
+  @include breakpoint($mobile) {
+    padding: 26px 0 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__content {
+    @include span(6 of 12 .3);
+    display: inline-block;
+    vertical-align: middle;
+    font-family: $roboto_regular;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #858585;
+    @include breakpoint($mobile) {
+      width: 100%;
+      margin-bottom: 11px;
+      text-align: center;
+    }
+  }
+
+  &__social-links {
+    @include span(6 of 12 .3 last);
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    font-size: 0;
+    @include breakpoint($mobile) {
+      width: 100%;
+      text-align: center;
+    }
+
+    &-item {
+      display: inline-block;
+      margin-right: 14px;
+    }
+
+    .footer__link, a {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      line-height: 40px;
+      font-size: 0;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      color: #ffffff;
+      @include brAll(50%);
+
+      &:before {
+        font-size: 18px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $overlay;
+        opacity: 0;
+        @include transition(opacity, .3s);
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    .icon-tw {
+      background-color: $twitter;
+
+      &:before {
+        font-size: 17px;
+      }
+    }
+
+    .icon-fb {
+      background-color: $fb;
+    }
+
+    .icon-in {
+      background-color: $instagramm;
+    }
+  }
+
+  &__link, footer__content a {
+    font-family: $roboto_regular;
+    font-size: 14px;
+    text-decoration: none;
+    color: #858585;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

@@ -1,0 +1,78 @@
+.sitemap {
+  padding: 44px 0 77px;
+  background-color: #f3f3f3;
+
+  @include breakpoint($mobile) {
+    padding: 50px 0;
+  }
+
+  .sup-desc-logo {
+    color: rgba(68, 68, 68, .7);
+  }
+
+  .sub-desc-logo {
+    color: #444;
+  }
+
+  &-item {
+
+    .menu li {
+      &:not(:last-child) {
+        margin-bottom: 21px;
+      }
+    }
+
+    @include breakpoint($desktop) {
+
+      @include span(2 of 8 .53);
+
+      &:nth-child(4n) {
+        @include span(2 of 8 .53 last);
+      }
+    }
+
+    @include breakpoint($not-desktop) {
+      &:first-child {
+        display: none;
+      }
+    }
+
+    @include breakpoint($tablet) {
+
+      @include span(2 of 6 .43);
+
+      &:nth-child(3n) {
+        @include span(2 of 6 .43 last);
+      }
+    }
+
+    @include breakpoint($mobile) {
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 55px;
+      }
+
+      @include span(6 of 6 .43);
+    }
+
+    a {
+      font-family: $roboto_regular;
+      font-size: 16px;
+      text-decoration: none;
+      color: #999999;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    font-family: $roboto;
+    font-weight: bold;
+    font-size: 18px;
+    color: #25212c;
+  }
+}
