@@ -55,7 +55,7 @@
   .sidebar-random__img-wrap a:after {
     position: absolute;
     z-index: 7;
-    top: 45%;
+    top: calc(50% - 49px);
     left: calc(50% - 44px);
     content: '\e908';
     font-family: 'icomoon';

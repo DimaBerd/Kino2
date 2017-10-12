@@ -7,8 +7,12 @@ body {
 .container {
   @include clearfix;
   @include container;
-  @include breakpoint (($tablet)) {padding: 0 35px;}
-  @include breakpoint (($mobile)) {padding: 0 20px;}
+  @include breakpoint (($tablet)) {
+    padding: 0 35px;
+  }
+  @include breakpoint (($mobile)) {
+    padding: 0 20px;
+  }
 }
 
 .page-wrap {
@@ -74,7 +78,7 @@ time, mark, audio, video {
   }
 }
 
-h2, .title  {
+h2, .title {
   @include title;
 }
 

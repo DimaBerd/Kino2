@@ -9,17 +9,16 @@
     position: relative;
   }
 
-
   .form-action {
     &:before {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      content: '';
-      background-color: rgba(0, 0, 0, 0);
-      @include transition(background-color, .3s);
+      z-index: 8;
+      top: calc(32%);
+      left: calc(50% + 83px);
+      content: '\e90c';
+      font-family: 'icomoon';
+      font-size: 19px;
+      color: #fff;
     }
 
     &:hover:before {

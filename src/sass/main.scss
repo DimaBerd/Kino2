@@ -1,14 +1,11 @@
 // ---Libraries---
-
 // Docs: http://compass-style.org/examples/
 @import "../../bower_components/compass-mixins/lib/compass/reset";
 @import "../../bower_components/compass-mixins/lib/compass/css3";
 @import "../../bower_components/compass-mixins/lib/compass/utilities";
-
 // Video: http://susy.oddbird.net/demos/
 // Docs: http://susydocs.oddbird.net
 @import "../../bower_components/susy/sass/susy";
-
 // Docs: http://breakpoint-sass.com/
 @import "../../bower_components/compass-breakpoint/stylesheets/breakpoint";
 
@@ -21,7 +18,7 @@ $desktopMid: 1024px 1599px;
 $desktopSmall: 1024px 1366px;
 $tabletMid: 820px 1023px;
 
-$not-tablet: ($mobile) , ($desktop);
+$not-tablet: ($mobile), ($desktop);
 $not-desktop: 0 1023px;
 $not-mobile: 641px;
 
@@ -43,6 +40,7 @@ $susy: (
 @import "common";
 @import "fonts";
 @import "header";
+@import "menu";
 @import "footer";
 @import "styles";
 @import "header-slider";

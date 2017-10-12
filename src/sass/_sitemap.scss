@@ -1,5 +1,5 @@
 .sitemap {
-  padding: 44px 0 77px;
+  padding: 59px 0;
   background-color: #f3f3f3;
 
   @include breakpoint($mobile) {
@@ -61,9 +61,10 @@
       font-size: 16px;
       text-decoration: none;
       color: #999999;
+      @include transition(color, .3s);
 
       &:hover {
-        text-decoration: underline;
+        color: $blue;
       }
     }
   }

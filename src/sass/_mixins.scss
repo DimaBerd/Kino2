@@ -49,7 +49,7 @@
   border-radius: $left-top $right-top $left-bottom $left-bottom;
 }
 
-@mixin brAll ($border-radius) {
+@mixin brAll($border-radius) {
   -webkit-border-radius: $border-radius;
   -moz-border-radius: $border-radius;
   border-radius: $border-radius;
@@ -129,7 +129,7 @@
   }
 
   &:hover:before {
-      background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .2);
   }
 }
 

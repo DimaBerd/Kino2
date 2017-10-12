@@ -1,7 +1,10 @@
 a.logo {
   display: inline-block;
+  max-width: 205px;
   font-size: 0;
+  text-decoration: none;
   color: #fff;
+  @include transition(all, .3s);
 
   &:hover {
     text-decoration: none;
@@ -15,6 +18,10 @@ a.logo {
     font-family: "icomoon";
     font-size: 52px;
     color: $blue;
+    @include transition(all, .3s);
+    @include breakpoint($not-desktop) {
+      font-size: 49px;
+    }
   }
 }
 
@@ -25,6 +32,9 @@ a.logo {
   font-size: 17px;
   color: rgba(225, 225, 225, .7);
   text-transform: lowercase;
+  @include breakpoint($mobile) {
+    font-size: 14px;
+  }
 }
 
 .sub-desc-logo {
@@ -37,4 +47,11 @@ a.logo {
   line-height: 32px;
   color: #fff;
   text-transform: lowercase;
+  @include breakpoint($tablet) {
+    font-size: 47px;
+  }
+  @include breakpoint($mobile) {
+    font-size: 48px;
+    line-height: 25px;
+  }
 }

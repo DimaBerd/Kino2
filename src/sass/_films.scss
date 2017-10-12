@@ -141,7 +141,6 @@
       @include transition(opacity, .6s);
     }
 
-
     &:hover {
       &:before, &:after {
         opacity: 1;
@@ -348,7 +347,7 @@
       @include transition(background-color, .3s);
 
       &:hover {
-          background-color: rgba(0, 0, 0, .2);
+        background-color: rgba(0, 0, 0, .2);
       }
     }
   }

@@ -141,6 +141,10 @@
           -o-animation: angle-hide .3s forwards;
           animation: angle-hide .3s forwards;
         }
+
+        .news__title {
+          color: $blue;
+        }
       }
 
       a:not(:hover) {
@@ -168,7 +172,6 @@
     @include span(8 of 8 0);
   }
 
-
   img {
     width: 100%;
     height: 100%;
@@ -193,6 +196,7 @@
   font-family: $roboto_regular;
   font-size: 16px;
   color: #444444;
+  @include transition(color, .3s);
 }
 
 .news-data {
