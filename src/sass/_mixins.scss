@@ -112,24 +112,14 @@
   cursor: pointer;
   text-decoration: none;
   color: #fff;
+  @include transition(background-color, .3s);
   @include breakpoint($mobile) {
     width: 100%;
     padding: 17px 15px 15px;
   }
 
-  &:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: '';
-    background-color: rgba(0, 0, 0, 0);
-    @include transition(background-color, .3s);
-  }
-
-  &:hover:before {
-    background-color: rgba(0, 0, 0, .2);
+  &:hover {
+    background-color: #113B6F;
   }
 }
 

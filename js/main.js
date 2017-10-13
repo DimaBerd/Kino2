@@ -97,17 +97,14 @@
     // mobile menu implemintation and call
     if(window.innerWidth < 1024) {
       $('#menu').mmenu({
-        "counters": true,
+        "counters": false,
         "extensions": [
           "pagedim-black"
         ],
         "offCanvas": {
           "position": "right",
           "zposition": "front",
-        },
-        // 'navbar': {
-        //   'add': false
-        // }
+        }
       });
     }
   });
