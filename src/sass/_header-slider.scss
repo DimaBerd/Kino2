@@ -183,8 +183,8 @@
   position: relative;
   z-index: 7;
   @include breakpoint($desktop) {
-    @include span(3 of 8 .4);
-    @include post(5 of 8 .4);
+    @include span(7 of 16 .4);
+    @include post(9 of 16 .4);
   }
 
   @include breakpoint(801px 1023px) {
@@ -288,7 +288,7 @@ a.wrap-about-film, .wrap-about-film a {
 
 a.wrap-watch-film, .wrap-watch-film a {
   margin-bottom: 23px;
-  font-family: s $roboto_regular;
+  font-family: $roboto_regular;
   font-size: 15px;
   text-decoration: none;
   text-transform: uppercase;

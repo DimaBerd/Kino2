@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 var path = {
   build: {
     // This is the build folder. Here you can see result.
-    html: 'src/build/',
+    html: 'build/',
     css: 'css/'
   },
   src: {
@@ -20,7 +20,7 @@ var path = {
     html: 'src/**/*.html',
     style: 'src/sass/**/*.scss'
   },
-  clean: './build'
+  clean: 'build'
 };
 
 gulp.task('html', function () {

@@ -1,6 +1,6 @@
 .films {
   padding: 90px 0;
-  background: url('../images/assets/photography.png') left top repeat;
+  background: url('../images/backgrounds/photography.png') left top repeat;
   @include breakpoint($mobile) {
     padding: 250px 0 45px 0;
   }
