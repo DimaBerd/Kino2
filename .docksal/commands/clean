@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+fin db import .docksal/dump/init.sql
+
+fin drush cim
+
+fin drush uli

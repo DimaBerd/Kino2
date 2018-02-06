@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+composer install
+
+composer drupal-scaffold
+
+fin up
+
+fin db import .docksal/dump/init.sql
