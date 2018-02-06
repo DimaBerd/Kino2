@@ -1,13 +1,24 @@
-Avis Drupal 8 theme starter kit readme file.
+Это Drupal тема создана чтобы ознакомить разработчика с инструментами используемыми нами на front-end, на минимальном уровне, необходимом для дальнейшей работе в команде.
 
-If u already don't have install these:
+Мы используем Docksal как среду для разработки. Он должен быть установлен в вашей системе.
+https://docs.docksal.io/en/master/
 
- - node js with command "sudo apt-get install nodejs";
- - npm with "sudo apt-get install npm";
- - gulp with "sudo npm install gulp -g" or u may don't install it and use it locally with command "npm run gulp";
- - bower "sudo npm install -g bower".
+Репотзиторий содержит исходники, которые нужно скомпилировать, чтобы сайт открылся в браузере.
+В корне проекта выполняем:
 
-After that run "npm install" and "bower install" in the directory with package.json and bower.json.
+fin up
+fin exec nmp install
+fin exec nmp run bower install
 
-And u ready to rock. Run "gulp"(or "npm run gulp" if u don't install gulp globally) for magic.
-You can see other gulp tasks in gulpfile.js.
+
+После чего в папке проекта добавятся необходимые зависимости.
+
+Теперь мы можем скомпилировать проект:
+fin exec nmp run gulp
+
+Появится поддиректория build, содержащая скомпилированные проект.
+Теперь, вплоть до перезагрузки системы gulp будет отслеживать изменения в исходниках, и перекомпилировать проект автоматичеки.
+После перезагрузки, вам нужно выполнить только:
+
+fin up
+fin exec nmp run gulp
