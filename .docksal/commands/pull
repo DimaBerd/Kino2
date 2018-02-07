@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-composer install
-
-fin drush cim
-
-fin drush cr
